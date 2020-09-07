@@ -5,12 +5,8 @@ bubble_sort <- function(vector) {
     sorted <- TRUE
     
     for(i in 1:(length(vector) - 1)) {
-      first  <- vector[i]
-      second <- vector[i+ 1]
-      
-      if(first > second) {
-        vector[i] <- second
-        vector[i + 1] <- first
+      if(vector[i] > vector[i + 1]) {
+        vector <- swap(vector, i, i + 1)
         sorted <- FALSE
       }
     }
